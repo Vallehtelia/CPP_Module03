@@ -6,15 +6,24 @@
 /*   By: vvaalant <vvaalant@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 18:14:50 by vvaalant          #+#    #+#             */
-/*   Updated: 2024/08/29 15:46:59 by vvaalant         ###   ########.fr       */
+/*   Updated: 2024/08/29 16:14:54 by vvaalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{
+	std::cout << "ClapTrap Default constructor called\n";
+	this->_Name = "Default";
+	this->_HitPoints = 10;
+	this->_EnergyPoints = 10;
+	this->_AttackDamage = 0;
+}
+
 ClapTrap::ClapTrap(std::string Name)
 {
-	std::cout << "Default constructor called\n";
+	std::cout << "Claptrap named constructor called\n";
 	this->_Name = Name;
 	this->_HitPoints = 10;
 	this->_EnergyPoints = 10;
@@ -23,12 +32,12 @@ ClapTrap::ClapTrap(std::string Name)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called\n";
+	std::cout << "Claptrap " << this->_Name << " deconstructor called\n";
 }
 
 ClapTrap::ClapTrap(ClapTrap const &other)
 {
-	std::cout << "Copy constructor called\n";
+	std::cout << "ClapTrap copy constructor called\n";
 	this->_Name = other._Name;
 	this->_HitPoints = other._HitPoints;
 	this->_EnergyPoints = other._EnergyPoints;
@@ -37,7 +46,7 @@ ClapTrap::ClapTrap(ClapTrap const &other)
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &other)
 {
-	std::cout << "Copy assignment operator called\n";
+	std::cout << "ClapTrap copy assignment operator called\n";
 	this->_Name = other._Name;
 	this->_HitPoints = other._HitPoints;
 	this->_EnergyPoints = other._EnergyPoints;

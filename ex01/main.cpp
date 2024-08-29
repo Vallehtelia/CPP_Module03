@@ -6,11 +6,12 @@
 /*   By: vvaalant <vvaalant@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 14:45:42 by vvaalant          #+#    #+#             */
-/*   Updated: 2024/08/29 16:05:13 by vvaalant         ###   ########.fr       */
+/*   Updated: 2024/08/29 16:15:31 by vvaalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main()
 {
@@ -58,4 +59,15 @@ int	main()
 	clippy.takeDamage(8);
 	clippy.beRepaired(1);
 	clippy.attack("Valle");
+
+	std::cout << "\n";
+	ScavTrap	Deffu;
+	ScavTrap	Pekko("Pekko");
+	Pekko.guardGate();
+	Pekko.guardGate();
+	Pekko.attack("Psyco");
+	Deffu.attack("Psyco2");
+	Deffu.guardGate();
+	Deffu.guardGate();
+	std::cout << "\n";
 }
