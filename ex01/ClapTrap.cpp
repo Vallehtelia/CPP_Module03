@@ -6,7 +6,7 @@
 /*   By: vvaalant <vvaalant@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 18:14:50 by vvaalant          #+#    #+#             */
-/*   Updated: 2024/08/29 16:14:54 by vvaalant         ###   ########.fr       */
+/*   Updated: 2024/08/29 16:31:18 by vvaalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(ClapTrap const &other)
 {
-	std::cout << "ClapTrap copy constructor called\n";
+	std::cout << "ClapTrap Copy constructor called\n";
 	this->_Name = other._Name;
 	this->_HitPoints = other._HitPoints;
 	this->_EnergyPoints = other._EnergyPoints;
@@ -46,7 +46,7 @@ ClapTrap::ClapTrap(ClapTrap const &other)
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &other)
 {
-	std::cout << "ClapTrap copy assignment operator called\n";
+	std::cout << "ClapTrap Copy assignment operator called\n";
 	this->_Name = other._Name;
 	this->_HitPoints = other._HitPoints;
 	this->_EnergyPoints = other._EnergyPoints;
