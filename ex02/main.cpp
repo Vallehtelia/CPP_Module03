@@ -6,12 +6,13 @@
 /*   By: vvaalant <vvaalant@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 14:45:42 by vvaalant          #+#    #+#             */
-/*   Updated: 2024/08/29 16:37:56 by vvaalant         ###   ########.fr       */
+/*   Updated: 2024/08/29 19:44:42 by vvaalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main()
 {
@@ -87,5 +88,24 @@ int	main()
 		Sweaty.guardGate();
 		Sweaty.guardGate();
 		std::cout << "\n";
+	}
+
+	{
+		std::cout << "\n";
+		std::cout << "\033[32m### Testing FragTrap ###\033[0m\n";
+		FragTrap	topFrag;
+		FragTrap	bottomFrag("Vili");
+		FragTrap	middleFrag = topFrag;
+		FragTrap	skillFrag;
+
+		skillFrag = bottomFrag;
+		topFrag.highFivesGuys();
+		bottomFrag.highFivesGuys();
+		middleFrag.highFivesGuys();
+		skillFrag.highFivesGuys();
+		skillFrag.attack("Joe Biden");
+		topFrag.attack("Donald Duck");
+		bottomFrag.attack("DJ Kamala Harrison");
+		middleFrag.attack("Elon Husky");
 	}
 }
